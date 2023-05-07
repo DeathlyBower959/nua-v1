@@ -78,6 +78,7 @@
    ```sh
    git add .
    git commit -m "Release v1.0.0"
+   # You can use "git tag" to see all the existing tags, if you are unsure of what version we are currently on
    git tag v1.0.0
    git push -u origin release/v1.0.0
    ```
