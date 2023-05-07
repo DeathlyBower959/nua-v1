@@ -52,7 +52,6 @@ Make sure you have [yarn](https://yarnpkg.com/) installed.
 
 ## 🤝 Contributing
 
-<!-- TODO: CONTRIBUTING.md -->
 <!-- TODO: ISSUE_TEMPLATES -->
 
 Contributions, issues and feature requests are welcome.
