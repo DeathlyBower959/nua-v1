@@ -31,11 +31,11 @@
 
 4. Create a pull request
 
-   <img src="./assets/create-pull-request.png" width="407.5"/>
+   <img src="./assets/create-pull-request.png" width="75%"/>
 
    Fill out title and description fields (and confirm the `INTO` branch is set to `develop`)
 
-   <img src="./assets/edit-pull-request.png" width="407.5"/>
+   <img src="./assets/edit-pull-request.png" width="75%"/>
 
 5. Merge pull request back into develop
 
@@ -43,10 +43,10 @@
 
    Once the checks complete (preview deployment), merge the branch
 
-   <img src="./assets/merging-pull-request.png" width="407.5"/>
-   <img src="./assets/merge-pull-request.png" width="407.5"/>
-   <img src="./assets/delete-pull-request-branch.png" width="407.5"/>
-   <img src="./assets/final-delete-pull-request.png" width="407.5"/>
+   <img src="./assets/merging-pull-request.png" width="75%"/>
+   <img src="./assets/merge-pull-request.png" width="75%"/>
+   <img src="./assets/delete-pull-request-branch.png" width="75%"/>
+   <img src="./assets/final-delete-pull-request.png" width="75%"/>
 
 6. Pull back changes into local
 
@@ -83,11 +83,11 @@
 
 5. Create a pull request
 
-   <img src="./assets/create-pull-request.png" width="407.5"/>
+   <img src="./assets/create-pull-request.png" width="75%"/>
 
    Fill out title and description fields (and confirm the `INTO` branch is set to `main`)
 
-   <img src="./assets/edit-pull-request-release.png" width="407.5"/>
+   <img src="./assets/edit-pull-request-release.png" width="75%"/>
 
 6. Merge pull request back into develop
 
@@ -95,10 +95,10 @@
 
    Once the checks complete (preview deployment), merge the branch
 
-   <img src="./assets/merging-pull-request-release.png" width="407.5"/>
-   <!-- <img src="./assets/merge-pull-request-release.png" width="407.5"/> -->
-   <img src="./assets/delete-pull-request-branch.png" width="407.5"/>
-   <img src="./assets/final-delete-pull-request-release.png" width="407.5"/>
+   <img src="./assets/merging-pull-request-release.png" width="75%"/>
+   <!-- <img src="./assets/merge-pull-request-release.png" width="75%"/> -->
+   <img src="./assets/delete-pull-request-branch.png" width="75%"/>
+   <img src="./assets/final-delete-pull-request-release.png" width="75%"/>
 
 7. Pull back changes into local
 
