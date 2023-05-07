@@ -4,7 +4,7 @@
     <img alt="App uses (total how many clicked, hours used, idk)" src="API_URL" />
   </a> -->
   <a href="https://github.com/DeathlyBower959/nua/blob/main/LICENSE">
-    <img alt="License: MIT" src="https://img.shields.io/badge/license-GNU-yellow.svg" target="_blank" />
+    <img alt="License: GNU" src="https://img.shields.io/badge/license-GNU-yellow.svg" target="_blank" />
   </a>
   <a href="https://github.com/DeathlyBower959/nua/actions?query=workflow%3A%22Lint+Checks%22+branch%3Amain">
     <img src="https://img.shields.io/github/actions/workflow/status/DeathlyBower959/nua/lint-pr.yml?branch=main&style=flat-square"
