@@ -96,7 +96,7 @@
    Once the checks complete (preview deployment), merge the branch
 
    <img src="./assets/merging-pull-request-release.png" width="407.5"/>
-   <img src="./assets/merge-pull-request.png-release" width="407.5"/>
+   <!-- <img src="./assets/merge-pull-request-release.png" width="407.5"/> -->
    <img src="./assets/delete-pull-request-branch.png" width="407.5"/>
    <img src="./assets/final-delete-pull-request-release.png" width="407.5"/>
 
