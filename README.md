@@ -6,10 +6,10 @@
   <a href="https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow.svg" target="_blank" />
   </a>
-  <a href="https://github.com/DeathlyBower959/nua/actions?query=workflow%3Alint-pr+branch%3Amaster">
-		<img src="https://img.shields.io/github/actions/workflow/status/carloscuesta/gitmoji/lint-pr.yml?branch=master&style=flat-square"
-			 alt="Build Status">
-	</a>
+  <a href="https://github.com/DeathlyBower959/nua/actions?query=workflow%3A%22Lint+Checks%22+branch%3Amain">
+    <img src="https://img.shields.io/github/actions/workflow/status/DeathlyBower959/nua/lint-pr.yml?branch=main&style=flat-square"
+    alt="Build Status">
+  </a>
 </p>
 
 <p align="center">An all in one <a href="https://nua.vercel.app">solution</a> for all your daily needs</p>
