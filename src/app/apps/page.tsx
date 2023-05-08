@@ -1,3 +1,3 @@
 export default function Home() {
-  return <main className="flex-grow">Apps</main>;
+  return <main className='flex-grow'>Apps</main>;
 }
