@@ -80,11 +80,16 @@
   }
 }
 
-@keyframes sidebar-entry-width {
+@keyframes animate-sidebar-on-load {
   0% {
     width: 0;
+    overflow: hidden;
+  }
+  99% {
+    overflow: hidden;
   }
   100% {
     width: 9rem;
+    overflow: auto;
   }
 }

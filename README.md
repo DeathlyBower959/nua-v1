@@ -21,7 +21,7 @@ Make sure you have [yarn](https://yarnpkg.com/) installed.
 1. Make a copy to your local machine
 
    ```sh
-   git clone https://github.com/DeathlyBower959/nua DIRECTORY
+   git clone https://github.com/DeathlyBower959/nua.git DIRECTORY
    ```
 
 2. Install required dependencies/setup project

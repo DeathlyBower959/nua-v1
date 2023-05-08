@@ -8,8 +8,7 @@ import { useForm } from 'react-hook-form';
 import MemoDarkLogo from '~/atoms/logo/DarkLogo';
 import MemoLightLogo from '~/atoms/logo/LightLogo';
 import ThemeSwitch from '~/atoms/ThemeChanger';
-import useRequiredContext from '~/hooks/useRequiredContext';
-import { SettingsContext } from '~/providers/settings';
+import { useSettingsContext } from '~/providers/settings';
 import { ISettings, settingsSchema } from '~/schema/settings';
 import { Button } from '~/ui/button';
 import {
@@ -32,7 +31,7 @@ import type { SubmitHandler } from 'react-hook-form';
 
 const Sidebar: NextPage = () => {
   const theme = useTheme();
-  const [settings, setSettings] = useRequiredContext(SettingsContext);
+  const [settings, setSettings] = useSettingsContext();
 
   // const { register, handleSubmit, formState } = useForm<ISettings>({
   const { handleSubmit } = useForm<ISettings>({
@@ -54,7 +53,7 @@ const Sidebar: NextPage = () => {
   // Links: Utility
   // FIX: Sidebar animation (it drags as the inner animation finishes before the outer animation)
   return (
-    <div className='w-36 z-[1]'>
+    <div className='w-36 z-[1] animate-[animate-sidebar-on-load_250ms_ease-out]'>
       <nav className='h-screen group/navbar flex w-36 flex-col items-center justify-between bg-muted px-6 py-4 pt-8 transition-all duration-500 ease-out hover:w-96'>
         <div className='flex w-3/4 flex-col items-center'>
           <Link href='/'>
@@ -68,7 +67,7 @@ const Sidebar: NextPage = () => {
           <div className='flex w-full flex-col gap-5 transition-all duration-500 ease-out group-hover/navbar:w-full'>
             <div className='flex w-full justify-center gap-3'>
               <Search size={34} className='shrink-0' />
-              <div className='max-w-0 overflow-hidden group-hover/navbar:block w-full group-hover/navbar:max-w-full'>
+              <div className='w-0 overflow-hidden transition-all delay-75 duration-500 ease-out group-hover/navbar:block group-hover/navbar:w-full'>
                 <Input
                   placeholder='Search'
                   onChange={e => setSearchValue(e.target.value)}
@@ -79,7 +78,7 @@ const Sidebar: NextPage = () => {
             <Link href='/apps'>
               <div className='flex w-full justify-center gap-3'>
                 <Wrench size={34} className='shrink-0' />
-                <div className='w-0 overflow-hidden transition-all duration-500 ease-out group-hover/navbar:block group-hover/navbar:w-full'>
+                <div className='w-0 overflow-hidden transition-all delay-75 duration-500 ease-out group-hover/navbar:block group-hover/navbar:w-full'>
                   <Label className='cursor-pointer text-xl'>Applications</Label>
                 </div>
               </div>

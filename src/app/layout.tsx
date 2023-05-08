@@ -8,7 +8,7 @@ import './globals.css';
 // })
 import { Noto_Sans } from 'next/font/google';
 import SettingsProvider from '~/providers/settings';
-import Provider from '~/providers/theme';
+import ThemeProvider from '~/providers/theme';
 
 const Sidebar = dynamic(() => import('~/components/nav/Sidebar'), {
   ssr: false,
@@ -33,14 +33,14 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body className={noto_sans.className}>
-        <Provider>
+        <ThemeProvider>
           <SettingsProvider>
             <div className='flex min-h-screen'>
               <Sidebar />
               {children}
             </div>
           </SettingsProvider>
-        </Provider>
+        </ThemeProvider>
       </body>
     </html>
   );
