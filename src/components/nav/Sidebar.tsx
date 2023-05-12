@@ -65,10 +65,10 @@ const Sidebar: NextPage = () => {
       <div className='w-36 z-[1] animate-[animate-sidebar-on-load_250ms_ease-out] max-md:w-0'>
         <nav
           className={clsx(
-            'h-screen group/navbar flex w-36 flex-col items-center justify-between bg-muted px-6 py-4 pt-8 transition-all duration-500 ease-out md:hover:w-96',
+            'h-screen group/navbar flex w-36 flex-col items-center justify-between bg-muted px-6 py-4 pt-8 transition-all duration-500 ease-out md:hover:w-96 max-md:px-0',
             {
               ['max-md:w-[100vw]']: isMenuOpen,
-              ['max-md:w-0 overflow-hidden px-0']: !isMenuOpen,
+              ['max-md:w-0 overflow-hidden']: !isMenuOpen,
             }
           )}
         >
