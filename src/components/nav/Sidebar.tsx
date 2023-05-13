@@ -30,6 +30,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 
 import type { NextPage } from 'next';
 import type { SubmitHandler } from 'react-hook-form';
+
 const Sidebar: NextPage = () => {
   const theme = useTheme();
   const [settings, setSettings] = useSettingsContext();
@@ -42,7 +43,7 @@ const Sidebar: NextPage = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchValue, setSearchValue] = useState('');
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const onSubmit = useCallback<SubmitHandler<ISettings>>(
     (data: ISettings) => {
@@ -52,28 +53,32 @@ const Sidebar: NextPage = () => {
     [setSettings]
   );
 
+  const closeSideBar = useCallback(() => {
+    setIsSidebarOpen(false);
+  }, []);
+
   // Links: Utility
   // FIX: Sidebar animation (it drags as the inner animation finishes before the outer animation)
   return (
     <>
       <div className='absolute top-2 right-2 md:hidden z-[2]'>
         <Menu
-          toggled={isMenuOpen}
-          toggle={() => setIsMenuOpen(prev => !prev)}
+          toggled={isSidebarOpen}
+          toggle={() => setIsSidebarOpen(prev => !prev)}
         />
       </div>
       <div className='w-36 z-[1] animate-[animate-sidebar-on-load_250ms_ease-out] max-md:w-0'>
         <nav
           className={clsx(
-            'h-screen group/navbar flex w-36 flex-col items-center justify-between bg-muted px-6 py-4 pt-8 transition-all duration-500 ease-out md:hover:w-96 max-md:px-0',
+            'h-screen group/navbar flex w-36 flex-col items-center justify-between bg-muted px-6 py-4 pt-8 transition-all  duration-500 ease-out md:hover:w-96 max-md:px-0',
             {
-              ['max-md:w-[100vw]']: isMenuOpen,
-              ['max-md:w-0 overflow-hidden']: !isMenuOpen,
+              ['max-md:w-[100vw]']: isSidebarOpen,
+              ['max-md:w-0 overflow-hidden']: !isSidebarOpen,
             }
           )}
         >
           <div className='flex w-3/4 flex-col items-center justify'>
-            <Link href='/'>
+            <Link href='/' onClick={closeSideBar}>
               {theme.resolvedTheme === 'dark' ? (
                 <MemoLightLogo className='h-8' />
               ) : (
@@ -92,7 +97,7 @@ const Sidebar: NextPage = () => {
                   className={clsx(
                     'w-0 overflow-hidden transition-all delay-75 duration-500 ease-out md:group-hover/navbar:block md:group-hover/navbar:w-full',
                     {
-                      ['w-full block']: isMenuOpen,
+                      ['max-md:w-full md:block']: isSidebarOpen,
                     }
                   )}
                 >
@@ -103,14 +108,14 @@ const Sidebar: NextPage = () => {
                   />
                 </div>
               </div>
-              <Link href='/apps'>
+              <Link href='/apps' onClick={closeSideBar}>
                 <div className='flex w-full justify-center gap-3'>
                   <Wrench size={34} className='shrink-0' />
                   <div
                     className={clsx(
                       'w-0 overflow-hidden transition-all delay-75 duration-500 ease-out md:group-hover/navbar:block md:group-hover/navbar:w-full',
                       {
-                        ['w-full block']: isMenuOpen,
+                        ['max-md:w-full block']: isSidebarOpen,
                       }
                     )}
                   >
