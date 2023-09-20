@@ -24,7 +24,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install pacakages
-        run: yarn
+        run: pnpm install
 
       - name: Lint
-        run: yarn lint
+        run: pnpm lint

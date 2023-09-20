@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "setup": "yarn && yarn husky install"
+    "project_setup": "pnpm install && pnpm husky install"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.1.0",
@@ -45,10 +46,7 @@
     "eslint-config-prettier": "^8.8.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
+    "only-allow": "^1.1.1",
     "prettier": "^2.8.8"
-  },
-  "engines": {
-    "npm": "please-use-yarn",
-    "yarn": ">= 1.19.1"
   }
 }
