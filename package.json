@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "project_setup": "pnpm install && pnpm husky install"
+    "project_setup": "pnpm install && pnpm pull_env && pnpm husky install",
+    "pull_env": "vercel env pull .env.local"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.1",
@@ -47,6 +48,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.3.0",
     "only-allow": "^1.1.1",
-    "prettier": "^2.8.8"
+    "prettier": "^2.8.8",
+    "vercel": "^32.2.5"
   }
 }
