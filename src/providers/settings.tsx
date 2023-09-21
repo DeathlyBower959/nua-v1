@@ -2,6 +2,7 @@
 
 import { createContext } from 'react';
 import { useLocalStorage } from 'usehooks-ts';
+import useRequiredContext from '~/hooks/useRequiredContext';
 import type { ISettings } from '~/schema/settings';
 
 export const SettingsContext = createContext<
@@ -23,3 +24,5 @@ export default function SettingsProvider({
     </SettingsContext.Provider>
   );
 }
+
+export const useSettingsContext = () => useRequiredContext(SettingsContext);

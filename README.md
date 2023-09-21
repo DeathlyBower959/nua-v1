@@ -16,18 +16,18 @@
 
 ## 🚀 Usage
 
-Make sure you have [yarn](https://yarnpkg.com/) installed.
+Make sure you have [pnpm](https://pnpm.io/) installed.
 
 1. Make a copy to your local machine
 
    ```sh
-   git clone https://github.com/DeathlyBower959/nua DIRECTORY
+   git clone https://github.com/DeathlyBower959/nua.git DIRECTORY
    ```
 
 2. Install required dependencies/setup project
 
    ```sh
-   yarn setup
+   pnpm project_setup
    ```
 
 3. Setup environment
@@ -42,7 +42,7 @@ Make sure you have [yarn](https://yarnpkg.com/) installed.
    - Dev server
 
      ```sh
-     yarn dev
+     pnpm dev
      ```
 
    - Debug (VSCode debug tab)
